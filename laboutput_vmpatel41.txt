@@ -87,6 +87,12 @@ test_b2_create_object (__main__.lab7f.test_b2_create_object)
 [Lab 7] - [Investigation 2] - [Part 3] - Test for creating time object in ./lab7f.py ... ok
 test_b3_operator_overloading (__main__.lab7f.test_b3_operator_overloading)
 [Lab 7] - [Investigation 2] - [Part 3] - Test for operator overloading for + in ./lab7f.py ... ok
+test_0 (__main__.lab7h.test_0)
+[Lab 7] - [Investigation 3] - [Part 2] - Test for file creation: ./lab7h.py ... ok
+test_b1_run (__main__.lab7h.test_b1_run)
+Test that lab7h.py runs successfully. ... ok
+test_b2_output (__main__.lab7h.test_b2_output)
+Test the exact output produced by lab7h.py. ... ok
 test_0 (__main__.lab7i.test_0)
 [Lab 7] - [Investigation 3] - [Part 3] - Local/Global Scope - Test for file creation: ./lab7i.py ... ok
 test_b1_run (__main__.lab7i.test_b1_run)
@@ -95,7 +101,7 @@ test_b2_run (__main__.lab7i.test_b2_run)
 [Lab 7] - [Investigation 3] - [Part 3] - Global scope - Test for correct output: ./lab7i.py ... ok
 
 ----------------------------------------------------------------------
-Ran 43 tests in 0.029s
+Ran 46 tests in 0.045s
 
 OK
 OPS445 Lab Report - System Information for running ./CheckLab7.py
@@ -106,7 +112,7 @@ OPS445 Lab Report - System Information for running ./CheckLab7.py
     Python version: 3123
     OS Platform: linux
     Working Directory: /home/vidhi/ops445/lab7
-    Start at: Fri Jul 10 07:53:58 2026
+    Start at: Fri Jul 10 08:25:36 2026
 =================================================================
 
 ==================================================
@@ -122,6 +128,15 @@ lab7c1.py Output
 08:00:00 + 00:50:00 --> 08:50:00
 08:55:00 + 00:50:00 --> 09:45:00
 09:50:00 + 1800 sec --> 10:20:00
+
+==================================================
+lab7h.py Output
+==================================================
+print() in main on schoolName: Seneca College
+print() in function1 on schoolName: Seneca College
+print() in main on schoolName: Seneca College
+print() in function2 on schoolName: Seneca College
+print() in main on schoolName: Seneca College
 
 ==================================================
 lab7i.py Output

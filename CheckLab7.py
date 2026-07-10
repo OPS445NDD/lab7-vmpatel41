@@ -433,6 +433,50 @@ class lab7f(unittest.TestCase):
         answer = '11:00:00'
         self.assertEqual(result, answer, msg=error_output)
 
+class lab7h(unittest.TestCase):
+    """All test cases for lab7h - global scope"""
+
+    def test_0(self):
+        """[Lab 7] - [Investigation 3] - [Part 2] - Test for file creation: ./lab7h.py"""
+        error_output = 'file lab7h.py cannot be found (HINT: make sure you and your file are in the correct directory)'
+        self.assertTrue(os.path.exists('./lab7h.py'), msg=error_output)
+
+    def test_b1_run(self):
+        """Test that lab7h.py runs successfully."""
+        process = subprocess.Popen(
+            [sys.executable, './lab7h.py'],
+            stdout=subprocess.PIPE,
+            stdin=subprocess.PIPE,
+            stderr=subprocess.PIPE
+        )
+        stdout, stderr = process.communicate()
+        return_code = process.wait()
+
+        error_output = 'lab7h.py exited with an error (HINT: check the script for syntax errors)'
+        self.assertEqual(return_code, 0, msg=error_output)
+
+    def test_b2_output(self):
+        """Test the exact output produced by lab7h.py."""
+        process = subprocess.Popen(
+            [sys.executable, './lab7h.py'],
+            stdout=subprocess.PIPE,
+            stdin=subprocess.PIPE,
+            stderr=subprocess.PIPE
+        )
+        stdout, stderr = process.communicate()
+
+        expected_output = (
+            b'print() in main on schoolName: Seneca College\n'
+            b'print() in function1 on schoolName: Seneca College\n'
+            b'print() in main on schoolName: Seneca College\n'
+            b'print() in function2 on schoolName: Seneca College\n'
+            b'print() in main on schoolName: Seneca College\n'
+        )
+
+        error_output = 'output of lab7h.py does not match the expected output'
+        self.assertEqual(stdout, expected_output, msg=error_output)
+
+
 class lab7i(unittest.TestCase):
     """All test cases for lab7i - local and global scope"""
     
